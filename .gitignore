@@ -1,0 +1,14 @@
+# Enviroments
+env/
+
+
+# vscode
+.vscode/
+
+
+# python
+__pycache__/
+
+
+# Development
+requirements_dev.txt

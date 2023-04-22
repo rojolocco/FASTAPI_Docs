@@ -12,7 +12,7 @@ app = FastAPI()
 
 
 # Home endpoint
-@app.get("/")
+@app.get("/", tags=["Home"])
 async def home():
     return {"message": "Welcome to Home!"}
 

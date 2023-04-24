@@ -3,7 +3,11 @@ from fastapi import FastAPI
 import uvicorn
 
 
+<<<<<<< HEAD
 # Import routers
+=======
+# Import routes
+>>>>>>> master
 from routes import router
 
 
@@ -17,7 +21,11 @@ async def home():
     return {"message": "Welcome to Home!"}
 
 
+<<<<<<< HEAD
 # Include routes
+=======
+# Routers
+>>>>>>> master
 app.include_router(router)
 
 

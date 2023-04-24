@@ -20,9 +20,7 @@ async def get_query_with_one_default_value(q: str | None = None):
 
 # Get Routes with two default values
 @query_route.get("/defaultvalue/two")
-async def get_query_with_two_default_value(
-        q: Union[str, None] = None,
-        p: bool = False):
+async def get_query_with_two_default_value(q: str | None = None, p: bool = False):
     if p:
         return {"message": f"p is a boolean query parameter: {p}"}
     return {"message": f"This is a query parameter: {q}"}
@@ -31,4 +29,12 @@ async def get_query_with_two_default_value(
 # Get Routes with one required parameter
 @query_route.get("/requiredvalue/one")
 async def get_query_with_one_required_value(q: str | None):
+    return {"message": f"This is a required query parameter: {q}"}
+
+
+# Get Routes with two required parameter
+@query_route.get("/requiredvalue/two")
+async def get_query_with_two_required_value(q: str | None, p: bool):
+    if p:
+        return {"message": f"p is a boolean query parameter: {p}"}
     return {"message": f"This is a required query parameter: {q}"}
